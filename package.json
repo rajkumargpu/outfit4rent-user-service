@@ -1,0 +1,26 @@
+{
+  "name": "outfit4rent-user-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "User service for outfit4rent application, save user and create user data",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env app.js",
+    "dev": "docker compose up -d && nodemon --exec \"node --env-file-if-exists=.env app.js\"",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.0",
+    "@fastify/helmet": "^13.0.0",
+    "fastify": "^5.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.14",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "smtp-server": "^3.19.12"
+  }
+}
